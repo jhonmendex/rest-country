@@ -7,7 +7,7 @@ class Country extends Component {
         <div className="country">
           <img src={this.props.bandera} alt="Imagen de una bandera" />
           <h1>{this.props.nombrePais}</h1>
-          <label>Population: {this.props.Population}</label>
+          <label>Population: {this.props.poblacion}</label>
         </div>
       </>
     );

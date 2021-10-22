@@ -6,7 +6,7 @@ class Searchbox extends Component {
       <>
         <div className="search-box-container">
           <div className="search-box">
-            <i class="fas fa-search"></i>
+            <i className="fas fa-search"></i>
             <input type="text" placeholder="Search for a country" />
           </div>
         </div>
