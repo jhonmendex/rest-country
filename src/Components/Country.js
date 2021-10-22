@@ -4,9 +4,11 @@ class Country extends Component {
   render(props) {
     return (
       <>
-        <img src={this.propndera} alt="Imagen de una bandera" />
-        <h1>{this.props.nombrePais}</h1>
-        <label>Population: {this.props.Population}</label>
+        <div className="country">
+          <img src={this.props.bandera} alt="Imagen de una bandera" />
+          <h1>{this.props.nombrePais}</h1>
+          <label>Population: {this.props.Population}</label>
+        </div>
       </>
     );
   }

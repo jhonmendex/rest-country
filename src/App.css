@@ -1,0 +1,52 @@
+body {
+  background: #fafafa;
+}
+
+.header {
+  background: #fff;
+}
+.container {
+  width: 1300px;
+  margin: 0 auto;
+  height: 100vh;
+}
+
+.wrapper {
+  width: 100%;
+}
+
+.footer {
+  height: 20vh;
+  background: #f2f2f2;
+  text-align: center;
+}
+
+.footer span {
+  padding-top: 50px;
+  display: block;
+  font-size: 30px;
+  font-weight: bold;
+  font-family: "Nunito Sans", sans-serif;
+}
+
+.search-box-container {
+  padding: 24px;
+  font-family: "Nunito Sans", sans-serif;
+}
+
+.search-box {
+  background: #fff;
+  width: 260px;
+  padding: 10px 0px 10px 30px;
+  border-radius: 5px;
+}
+.search-box input {
+  border: none !important;
+  height: 20px;
+  outline: none;
+  width: 220px;
+}
+.search-box i {
+  margin: 0px 10px 0px 0px;
+  padding: 0px 0px 0px 0px;
+}
