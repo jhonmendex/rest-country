@@ -2,15 +2,24 @@ import React from "react";
 import "./styles/Country.css";
 import Searchbox from "./SearchBox";
 import Country from "./Country";
-import Brazil from "../images/brazil.png";
-import Germany from "../images/germany.png";
-import EEUU from "../images/eeuu.png";
-const ListCountries = (props) => {
+
+import { countries } from "../Services/countries";
+
+const ListCountries = () => {
   return (
     <>
-      <Country bandera={Brazil} nombrePais="brazil" poblacion="25000000" />
-      <Country bandera={Germany} nombrePais="Alemania" poblacion="25000000" />
-      <Country bandera={EEUU} nombrePais="EE UU" poblacion="25000000" />
+      {countries.map((data, id) => {
+        return (
+          <div id={id} key={id}>
+            <Country
+              nombrePais={data.nombre}
+              bandera={data.bandera}
+              poblacion={data.poblacion}
+            />
+            <button>Agregar al carrito</button>
+          </div>
+        );
+      })}
     </>
   );
 };
@@ -19,18 +28,18 @@ class CountryContainer extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      data: [],
+      data: "",
     };
   }
   componentDidMount() {
-    this.fetchQuery();
+    this.consultaPaises();
   }
 
-  fetchQuery = async () => {
+  consultaPaises = async () => {
     try {
       const res = await fetch("http://localhost:3000/countries.json");
       const data = await res.json();
-      this.setState({ data: JSON.stringify(data) });
+      this.setState({ data: data });
     } catch (error) {
       console.log(error);
     }
@@ -41,7 +50,7 @@ class CountryContainer extends React.Component {
       <>
         <Searchbox />
         <div className="country-container">
-          <ListCountries datos={this.state.data} />
+          <ListCountries />
         </div>
       </>
     );
@@ -49,3 +58,5 @@ class CountryContainer extends React.Component {
 }
 
 export default CountryContainer;
+
+// <ListCountries datos={this.state.data} />
