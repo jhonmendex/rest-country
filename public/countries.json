@@ -1,23 +1,7 @@
 [
   {
-    "nombre": "Brazil",
-    "bandera": "miimagen.jpg",
-    "poplacion": 52000000,
-    "region": "america",
-    "capital": "brasilia"
-  },
-  {
-    "nombre": "Brazil",
-    "bandera": "miimagen.jpg",
-    "poplacion": 52000000,
-    "region": "america",
-    "capital": "brasilia"
-  },
-  {
-    "nombre": "Brazil",
-    "bandera": "miimagen.jpg",
-    "poplacion": 52000000,
-    "region": "america",
-    "capital": "brasilia"
-  }
+    "nombre": "Estados unidos",
+    "imagen": "http://localhost:3000/imagenes/eeuu.png",
+    "precio": 52000000
+  } 
 ]
