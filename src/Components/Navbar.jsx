@@ -12,6 +12,9 @@ class Navbar extends Component {
           <Link to="/about">
             <span>About</span>
           </Link>
+          <Link to="/datos">
+            <span>Datos</span>
+          </Link>
         </div>
       </div>
     );
